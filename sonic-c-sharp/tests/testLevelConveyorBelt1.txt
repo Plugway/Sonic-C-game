@@ -1,0 +1,7 @@
+Sonic;200;200;
+}
+Tile;100;280;true;graphics/conveyorBelt1.png;		so that the conveyor belt is solid
+:0;0;199;29;
+}
+ConveyorBelt;100;280;true;
+}

@@ -1,0 +1,4 @@
+Sonic;200;200;
+}
+BadnikMotobug;200;240;
+}

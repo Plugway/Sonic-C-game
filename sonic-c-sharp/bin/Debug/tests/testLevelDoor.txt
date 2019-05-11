@@ -1,0 +1,7 @@
+Sonic;200;200;
+}
+ClosingDoor;200;280
+}
+Tile;200;242;true;graphics/tile.png;
+:0;0;31;31;
+}

@@ -1,0 +1,441 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\NUnit3TestAdapter.3.13.0\build\net35\NUnit3TestAdapter.props" Condition="Exists('packages\NUnit3TestAdapter.3.13.0\build\net35\NUnit3TestAdapter.props')" />
+  <Import Project="packages\NUnit.3.11.0\build\NUnit.props" Condition="Exists('packages\NUnit.3.11.0\build\NUnit.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0FC426E5-EC30-4468-9514-CD4E7A62D030}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>sonic_c_sharp</RootNamespace>
+    <AssemblyName>sonic_c_sharp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32bit>false</Prefer32bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=3.11.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb">
+      <HintPath>packages\NUnit.3.11.0\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Background.cs" />
+    <Compile Include="BadnikFishObject.cs" />
+    <Compile Include="BadnikMotobug.cs" />
+    <Compile Include="BadnikSimpleObject.cs" />
+    <Compile Include="BlueRingObject.cs" />
+    <Compile Include="BlueRingSparklesObject.cs" />
+    <Compile Include="Cheats.cs" />
+    <Compile Include="ClosingDoor.cs" />
+    <Compile Include="CollisionDetection.cs" />
+    <Compile Include="ConveyorBeltObject.cs" />
+    <Compile Include="DroppingRings.cs" />
+    <Compile Include="EnergyBallObject.cs" />
+    <Compile Include="ExplosionObject.cs" />
+    <Compile Include="FadeToBlack.cs" />
+    <Compile Include="GameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameObject.cs" />
+    <Compile Include="GameState.cs" />
+    <Compile Include="HUD.cs" />
+    <Compile Include="InvisibleDamagingObject.cs" />
+    <Compile Include="LavaObject.cs" />
+    <Compile Include="LavaTopObject.cs" />
+    <Compile Include="LevelCard.cs" />
+    <Compile Include="LevelCompleteOverlay.cs" />
+    <Compile Include="MechaSonicObject.cs" />
+    <Compile Include="Music.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RedExplosionObject.cs" />
+    <Compile Include="Reloading.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="RingDroppedObject.cs" />
+    <Compile Include="RingObject.cs" />
+    <Compile Include="RingSparklesObject.cs" />
+    <Compile Include="ShuttersObject.cs" />
+    <Compile Include="SmokeObject.cs" />
+    <Compile Include="SonicObject.cs" />
+    <Compile Include="Sounds.cs" />
+    <Compile Include="SpikeBallBig.cs" />
+    <Compile Include="SpikeBallSmall.cs" />
+    <Compile Include="Tests.cs" />
+    <Compile Include="TileObject.cs" />
+    <Compile Include="YellowSpringObject.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="graphics\0.png" />
+    <Content Include="graphics\1.png" />
+    <Content Include="graphics\2.png" />
+    <Content Include="graphics\3.png" />
+    <Content Include="graphics\4.png" />
+    <Content Include="graphics\5.png" />
+    <Content Include="graphics\6.png" />
+    <Content Include="graphics\7.png" />
+    <Content Include="graphics\8.png" />
+    <Content Include="graphics\9.png" />
+    <Content Include="graphics\badnikFish1.png" />
+    <Content Include="graphics\badnikFish2.png" />
+    <Content Include="graphics\badnikMotobug1.png" />
+    <Content Include="graphics\badnikMotobug2.png" />
+    <Content Include="graphics\badnikMotobug3.png" />
+    <Content Include="graphics\badnikMotobug3old.png" />
+    <Content Include="graphics\badnikMotobug4.png" />
+    <Content Include="graphics\badnikSimple.png" />
+    <Content Include="graphics\bg2.png" />
+    <Content Include="graphics\bg3.png" />
+    <Content Include="graphics\bgEmpty.png" />
+    <Content Include="graphics\bgEnormous.png" />
+    <Content Include="graphics\bgSmoke1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="graphics\bgSmoke2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="graphics\bgSmoke3.png" />
+    <Content Include="graphics\bgSmoke4.png" />
+    <Content Include="graphics\bgSmoke5.png" />
+    <Content Include="graphics\bgSmoke6.png" />
+    <Content Include="graphics\bgSmoke7.png" />
+    <Content Include="graphics\bgSmoke8.png" />
+    <Content Include="graphics\blueRingRotating1.png" />
+    <Content Include="graphics\blueRingRotating2.png" />
+    <Content Include="graphics\blueRingRotating3.png" />
+    <Content Include="graphics\blueRingRotating4.png" />
+    <Content Include="graphics\blueRingSparkles1.png" />
+    <Content Include="graphics\blueRingSparkles2.png" />
+    <Content Include="graphics\blueRingSparkles3.png" />
+    <Content Include="graphics\blueRingSparkles4.png" />
+    <Content Include="graphics\cheats.png" />
+    <Content Include="graphics\conveyorBelt1.png" />
+    <Content Include="graphics\conveyorBelt2.png" />
+    <Content Include="graphics\conveyorBelt3.png" />
+    <Content Include="graphics\door.png" />
+    <Content Include="graphics\ending.png" />
+    <Content Include="graphics\energyBall1.png" />
+    <Content Include="graphics\energyBall2.png" />
+    <Content Include="graphics\energyBall3.png" />
+    <Content Include="graphics\energyBall4.png" />
+    <Content Include="graphics\energyBall5.png" />
+    <Content Include="graphics\explosion1.png" />
+    <Content Include="graphics\explosion2.png" />
+    <Content Include="graphics\explosion3.png" />
+    <Content Include="graphics\explosion4.png" />
+    <Content Include="graphics\explosion5.png" />
+    <Content Include="graphics\fadeToBlack1.png" />
+    <Content Include="graphics\fadeToBlack10.png" />
+    <Content Include="graphics\fadeToBlack11.png" />
+    <Content Include="graphics\fadeToBlack12.png" />
+    <Content Include="graphics\fadeToBlack13.png" />
+    <Content Include="graphics\fadeToBlack14.png" />
+    <Content Include="graphics\fadeToBlack15.png" />
+    <Content Include="graphics\fadeToBlack16.png" />
+    <Content Include="graphics\fadeToBlack17.png" />
+    <Content Include="graphics\fadeToBlack18.png" />
+    <Content Include="graphics\fadeToBlack19.png" />
+    <Content Include="graphics\fadeToBlack2.png" />
+    <Content Include="graphics\fadeToBlack20.png" />
+    <Content Include="graphics\fadeToBlack3.png" />
+    <Content Include="graphics\fadeToBlack4.png" />
+    <Content Include="graphics\fadeToBlack5.png" />
+    <Content Include="graphics\fadeToBlack6.png" />
+    <Content Include="graphics\fadeToBlack7.png" />
+    <Content Include="graphics\fadeToBlack8.png" />
+    <Content Include="graphics\fadeToBlack9.png" />
+    <Content Include="graphics\HUDRingsRed.png" />
+    <Content Include="graphics\HUDRingsYellow.png" />
+    <Content Include="graphics\lava1.png" />
+    <Content Include="graphics\lava2.png" />
+    <Content Include="graphics\lava3.png" />
+    <Content Include="graphics\lavaoldTop1old.png" />
+    <Content Include="graphics\lavaoldTop2old.png" />
+    <Content Include="graphics\lavaoldTop3old.png" />
+    <Content Include="graphics\lavaTop1.png" />
+    <Content Include="graphics\lavaTop2.png" />
+    <Content Include="graphics\lavaTop3.png" />
+    <Content Include="graphics\levelCard1.png" />
+    <Content Include="graphics\levelCard10.png" />
+    <Content Include="graphics\levelCard11.png" />
+    <Content Include="graphics\levelCard12.png" />
+    <Content Include="graphics\levelCard13.png" />
+    <Content Include="graphics\levelCard14.png" />
+    <Content Include="graphics\levelCard15.png" />
+    <Content Include="graphics\levelCard16.png" />
+    <Content Include="graphics\levelCard17.png" />
+    <Content Include="graphics\levelCard18.png" />
+    <Content Include="graphics\levelCard19.png" />
+    <Content Include="graphics\levelCard2.png" />
+    <Content Include="graphics\levelCard20.png" />
+    <Content Include="graphics\levelCard3.png" />
+    <Content Include="graphics\levelCard4.png" />
+    <Content Include="graphics\levelCard5.png" />
+    <Content Include="graphics\levelCard6.png" />
+    <Content Include="graphics\levelCard7.png" />
+    <Content Include="graphics\levelCard8.png" />
+    <Content Include="graphics\levelCard9.png" />
+    <Content Include="graphics\levelCompleteOverlay.png" />
+    <Content Include="graphics\mechaSonicDucking1.png" />
+    <Content Include="graphics\mechaSonicDucking1FacingRight.png" />
+    <Content Include="graphics\mechaSonicDucking1Hurt.png" />
+    <Content Include="graphics\mechaSonicDucking1HurtFacingRight.png" />
+    <Content Include="graphics\mechaSonicDucking2.png" />
+    <Content Include="graphics\mechaSonicDucking2FacingRight.png" />
+    <Content Include="graphics\mechaSonicDucking2Hurt.png" />
+    <Content Include="graphics\mechaSonicDucking2HurtFacingRight.png" />
+    <Content Include="graphics\mechaSonicFiring1.png" />
+    <Content Include="graphics\mechaSonicFiring1FacingRight.png" />
+    <Content Include="graphics\mechaSonicFiring1Hurt.png" />
+    <Content Include="graphics\mechaSonicFiring1HurtFacingRight.png" />
+    <Content Include="graphics\mechaSonicFiring2.png" />
+    <Content Include="graphics\mechaSonicFiring2FacingRight.png" />
+    <Content Include="graphics\mechaSonicFiring2Hurt.png" />
+    <Content Include="graphics\mechaSonicFiring2HurtFacingRight.png" />
+    <Content Include="graphics\mechaSonicLanding1.png" />
+    <Content Include="graphics\mechaSonicLanding1FacingRight.png" />
+    <Content Include="graphics\mechaSonicLanding1Hurt.png" />
+    <Content Include="graphics\mechaSonicLanding1HurtFacingRight.png" />
+    <Content Include="graphics\mechaSonicLanding2.png" />
+    <Content Include="graphics\mechaSonicLanding2FacingRight.png" />
+    <Content Include="graphics\mechaSonicLanding2Hurt.png" />
+    <Content Include="graphics\mechaSonicLanding2HurtFacingRight.png" />
+    <Content Include="graphics\mechaSonicLanding3.png" />
+    <Content Include="graphics\mechaSonicLanding3FacingRight.png" />
+    <Content Include="graphics\mechaSonicLanding3Hurt.png" />
+    <Content Include="graphics\mechaSonicLanding3HurtFacingRight.png" />
+    <Content Include="graphics\mechaSonicLanding4.png" />
+    <Content Include="graphics\mechaSonicLanding4FacingRight.png" />
+    <Content Include="graphics\mechaSonicLanding4Hurt.png" />
+    <Content Include="graphics\mechaSonicLanding4HurtFacingRight.png" />
+    <Content Include="graphics\mechaSonicLanding5.png" />
+    <Content Include="graphics\mechaSonicLanding5FacingRight.png" />
+    <Content Include="graphics\mechaSonicLanding5Hurt.png" />
+    <Content Include="graphics\mechaSonicLanding5HurtFacingRight.png" />
+    <Content Include="graphics\mechaSonicLanding6.png" />
+    <Content Include="graphics\mechaSonicLanding6FacingRight.png" />
+    <Content Include="graphics\mechaSonicLanding6Hurt.png" />
+    <Content Include="graphics\mechaSonicLanding6HurtFacingRight.png" />
+    <Content Include="graphics\mechaSonicLanding7.png" />
+    <Content Include="graphics\mechaSonicLanding7FacingRight.png" />
+    <Content Include="graphics\mechaSonicLanding7Hurt.png" />
+    <Content Include="graphics\mechaSonicLanding7HurtFacingRight.png" />
+    <Content Include="graphics\mechaSonicSpinning1.png" />
+    <Content Include="graphics\mechaSonicSpinning1FacingRight.png" />
+    <Content Include="graphics\mechaSonicSpinning1Hurt.png" />
+    <Content Include="graphics\mechaSonicSpinning1HurtFacingRight.png" />
+    <Content Include="graphics\mechaSonicSpinning2.png" />
+    <Content Include="graphics\mechaSonicSpinning2FacingRight.png" />
+    <Content Include="graphics\mechaSonicSpinning2Hurt.png" />
+    <Content Include="graphics\mechaSonicSpinning2HurtFacingRight.png" />
+    <Content Include="graphics\mechaSonicSpinning3.png" />
+    <Content Include="graphics\mechaSonicSpinning3FacingRight.png" />
+    <Content Include="graphics\mechaSonicSpinning3Hurt.png" />
+    <Content Include="graphics\mechaSonicSpinning3HurtFacingRight.png" />
+    <Content Include="graphics\mechaSonicStanding.png" />
+    <Content Include="graphics\mechaSonicStandingFacingRight.png" />
+    <Content Include="graphics\mechaSonicStandingHurt.png" />
+    <Content Include="graphics\mechaSonicStandingHurtFacingRight.png" />
+    <Content Include="graphics\platform.png" />
+    <Content Include="graphics\platform2.png" />
+    <Content Include="graphics\redExplosion1.png" />
+    <Content Include="graphics\redExplosion2.png" />
+    <Content Include="graphics\redExplosion3.png" />
+    <Content Include="graphics\redExplosion4.png" />
+    <Content Include="graphics\redExplosion5.png" />
+    <Content Include="graphics\redExplosion6.png" />
+    <Content Include="graphics\redExplosion7.png" />
+    <Content Include="graphics\ringRotating1.png" />
+    <Content Include="graphics\ringRotating2.png" />
+    <Content Include="graphics\ringRotating3.png" />
+    <Content Include="graphics\ringRotating4.png" />
+    <Content Include="graphics\ringSparkles1.png" />
+    <Content Include="graphics\ringSparkles2.png" />
+    <Content Include="graphics\ringSparkles3.png" />
+    <Content Include="graphics\ringSparkles4.png" />
+    <Content Include="graphics\shutters.png" />
+    <Content Include="graphics\shuttersBottom.png" />
+    <Content Include="graphics\shuttersTop.png" />
+    <Content Include="graphics\sonicBalancing1.png" />
+    <Content Include="graphics\sonicBalancing2.png" />
+    <Content Include="graphics\sonicDucking1.png" />
+    <Content Include="graphics\sonicDucking2.png" />
+    <Content Include="graphics\sonicHit.png" />
+    <Content Include="graphics\sonicJumpingOffSpring.png" />
+    <Content Include="graphics\sonicLookingUp1.png" />
+    <Content Include="graphics\sonicLookingUp2.png" />
+    <Content Include="graphics\sonicLosingLife.png" />
+    <Content Include="graphics\sonicPushing1.png" />
+    <Content Include="graphics\sonicPushing2.png" />
+    <Content Include="graphics\sonicPushing3.png" />
+    <Content Include="graphics\sonicPushing4.png" />
+    <Content Include="graphics\sonicRolling1.png" />
+    <Content Include="graphics\sonicRolling2.png" />
+    <Content Include="graphics\sonicRolling3.png" />
+    <Content Include="graphics\sonicRolling4.png" />
+    <Content Include="graphics\sonicRolling5.png" />
+    <Content Include="graphics\sonicRunning1.png" />
+    <Content Include="graphics\sonicRunning2.png" />
+    <Content Include="graphics\sonicRunning3.png" />
+    <Content Include="graphics\sonicRunning4.png" />
+    <Content Include="graphics\sonicSkidding1.png" />
+    <Content Include="graphics\sonicSkidding2.png" />
+    <Content Include="graphics\sonicSkidding3.png" />
+    <Content Include="graphics\sonicStanding.png" />
+    <Content Include="graphics\sonicWalking1.png" />
+    <Content Include="graphics\sonicWalking2.png" />
+    <Content Include="graphics\sonicWalking3.png" />
+    <Content Include="graphics\sonicWalking4.png" />
+    <Content Include="graphics\sonicWalking5.png" />
+    <Content Include="graphics\sonicWalking6.png" />
+    <Content Include="graphics\sonicWalking7.png" />
+    <Content Include="graphics\sonicWalking8.png" />
+    <Content Include="graphics\spikeBallBig.png" />
+    <Content Include="graphics\spikeBallSmall.png" />
+    <Content Include="graphics\spikesDown.png" />
+    <Content Include="graphics\spikesRight.png" />
+    <Content Include="graphics\spikesUp.png" />
+    <Content Include="graphics\tile.png" />
+    <Content Include="graphics\tile2.png" />
+    <Content Include="graphics\tile3.png" />
+    <Content Include="graphics\tile4.png" />
+    <Content Include="graphics\yellowSpring1.png" />
+    <Content Include="graphics\yellowSpring2.png" />
+    <Content Include="graphics\zoneTile10.png" />
+    <Content Include="graphics\zoneTile11.png" />
+    <Content Include="graphics\zoneTile12.png" />
+    <Content Include="graphics\zoneTile12a.png" />
+    <Content Include="graphics\zoneTile13.png" />
+    <Content Include="graphics\zoneTile13a.png" />
+    <Content Include="graphics\zoneTile14.png" />
+    <Content Include="graphics\zoneTile15.png" />
+    <Content Include="graphics\zoneTile16.png" />
+    <Content Include="graphics\zoneTile16a.png" />
+    <Content Include="graphics\zoneTile16b.png" />
+    <Content Include="graphics\zoneTile17.png" />
+    <Content Include="graphics\zoneTile18.png" />
+    <Content Include="graphics\zoneTile19.png" />
+    <Content Include="graphics\zoneTile19a.png" />
+    <Content Include="graphics\zoneTile2.png" />
+    <Content Include="graphics\zoneTile20.png" />
+    <Content Include="graphics\zoneTile20a.png" />
+    <Content Include="graphics\zoneTile21.png" />
+    <Content Include="graphics\zoneTile22.png" />
+    <Content Include="graphics\zoneTile23.png" />
+    <Content Include="graphics\zoneTile23a.png" />
+    <Content Include="graphics\zoneTile24.png" />
+    <Content Include="graphics\zoneTile25.png" />
+    <Content Include="graphics\zoneTile26.png" />
+    <Content Include="graphics\zoneTile26a.png" />
+    <Content Include="graphics\zoneTile27.png" />
+    <Content Include="graphics\zoneTile28.png" />
+    <Content Include="graphics\zoneTile28a.png" />
+    <Content Include="graphics\zoneTile29.png" />
+    <Content Include="graphics\zoneTile3.png" />
+    <Content Include="graphics\zoneTile30.png" />
+    <Content Include="graphics\zoneTile3w445.png" />
+    <Content Include="graphics\zoneTile4.png" />
+    <Content Include="graphics\zoneTile5.png" />
+    <Content Include="graphics\zoneTile5a.png" />
+    <Content Include="graphics\zoneTile6.png" />
+    <Content Include="graphics\zoneTile6a.png" />
+    <Content Include="graphics\zoneTile6b.png" />
+    <Content Include="graphics\zoneTile6c.png" />
+    <Content Include="graphics\zoneTile6d.png" />
+    <Content Include="graphics\zoneTile6e.png" />
+    <Content Include="graphics\zoneTile7.png" />
+    <Content Include="graphics\zoneTile8.png" />
+    <Content Include="graphics\zoneTile9.png" />
+    <Content Include="level1Files.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="music\Ending.wav" />
+    <Content Include="music\Final Boss.wav" />
+    <Content Include="music\Scrap Brain Zone.wav" />
+    <Content Include="sounds\bossHitSound.wav" />
+    <Content Include="sounds\doorClosingSound.wav" />
+    <Content Include="sounds\explosionSound.wav" />
+    <Content Include="sounds\jumpSonicCDSound.wav" />
+    <Content Include="sounds\jumpSound.wav" />
+    <Content Include="sounds\losingLifeSound.wav" />
+    <Content Include="sounds\mechaSonicFiringSound.wav" />
+    <Content Include="sounds\mechaSonicLandingSound.wav" />
+    <Content Include="sounds\mechaSonicSpinLandingSound.wav" />
+    <Content Include="sounds\mechaSonicSpinningChargingSound.wav" />
+    <Content Include="sounds\mechaSonicSpinningGoSound.wav" />
+    <Content Include="sounds\redExplosionSound.wav" />
+    <Content Include="sounds\ringLossSound.wav" />
+    <Content Include="sounds\ringSound.wav" />
+    <Content Include="sounds\ringSound2.wav" />
+    <Content Include="sounds\ringSound3.wav" />
+    <Content Include="sounds\silence.wav" />
+    <Content Include="sounds\spikesSound.wav" />
+    <Content Include="sounds\spindash go.wav" />
+    <Content Include="sounds\spinSound.wav" />
+    <Content Include="sounds\springSound.wav" />
+    <Content Include="tests\testLevel1.txt" />
+    <Content Include="tests\testLevel2.txt" />
+    <Content Include="tests\testLevelBadnikFish.txt" />
+    <Content Include="tests\testLevelBadnikMotobug.txt" />
+    <Content Include="tests\testLevelBadnikSimple.txt" />
+    <Content Include="tests\testLevelBlueRings.txt" />
+    <Content Include="tests\testLevelConveyorBelt1.txt" />
+    <Content Include="tests\testLevelConveyorBelt2.txt" />
+    <Content Include="tests\testLevelDoor.txt" />
+    <Content Include="tests\testLevelExplosion.txt" />
+    <Content Include="tests\testLevelLava.txt" />
+    <Content Include="tests\testLevelMechaSonic.txt" />
+    <Content Include="tests\testLevelRingSparkle.txt" />
+    <Content Include="tests\testLevelSpikeBallBig.txt" />
+    <Content Include="tests\testLevelSpikeBallSmall.txt" />
+    <Content Include="tests\testLevelSpikes.txt" />
+    <Content Include="tests\testLevelYellowSpring.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105.The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\NUnit.3.11.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\NUnit.3.11.0\build\NUnit.props'))" />
+    <Error Condition="!Exists('packages\NUnit3TestAdapter.3.13.0\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\NUnit3TestAdapter.3.13.0\build\net35\NUnit3TestAdapter.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+</Project>

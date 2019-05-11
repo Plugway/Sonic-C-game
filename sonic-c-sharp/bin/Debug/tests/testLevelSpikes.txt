@@ -1,0 +1,8 @@
+Sonic;-180;200;
+}
+Tile;-180;260;true;graphics/spikesUp.png;		spike's tile should be before InvisibleDamaging so coll dec doesnt first check InvisibleDamaging against sonic when the latter runs into the spikes
+:0;0;31;31;
+}
+InvisibleDamaging;-180;260;
+:0;0;30;30;
+}

@@ -1,0 +1,7 @@
+Sonic;190;200;
+}
+Tile;180;260;true;graphics/tile.png;			just so that lava can be stood on when invincible. since its listed before the lava, its not visible
+:0;0;31;31;
+}
+Lava;180;260;
+}

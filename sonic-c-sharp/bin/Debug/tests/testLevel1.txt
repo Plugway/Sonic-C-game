@@ -1,0 +1,14 @@
+Sonic;216;200;
+}
+Tile;200;242;true;graphics/tile.png;
+:0;0;31;31;
+}
+Tile;232;242;true;graphics/tile.png;
+:0;0;31;31;
+}
+Tile;168;210;true;graphics/tile.png;
+:0;0;31;31;
+}
+Tile;264;210;true;graphics/tile.png;
+:0;0;31;31;
+}
