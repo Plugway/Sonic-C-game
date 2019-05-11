@@ -1,4 +1,4 @@
-# Sonic-C-game
+# Sonic C# game
 
 Попытка реализации соника на C#.
 
